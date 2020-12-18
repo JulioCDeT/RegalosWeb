@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Regalos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+</head>
+<body>
+<h2>Regalos</h2>
+<table>
+    <th:block th:each="regalo: ${regalos}">
+        <tr>
+            <span>Tipo: </span><td th:text="${regalo.tipo}"/>
+            <span>Precio: </span><td th:text="${regalo.precio}"/>
+            <span>Para: </span><td th:text="${regalo.para}"/>
+            <span>De: </span><td th:text="${regalo.de}"/>
+        </tr>
+    </th:block>
+</table>
+
+</body>
+</html>
